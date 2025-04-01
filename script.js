@@ -9,6 +9,11 @@ function startSite() {
 
 
 
+
+function portfolioCarousel() {}
+
+
+
     window.onload = function() {
 		startSite();
     } ;
