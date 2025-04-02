@@ -127,15 +127,33 @@
 
 /*-------------------------------------- WELCOME SECTION -------------------------------------*/
 #welcome-section {
-    background-color: rgba(49, 189, 240, 0.5);
+    /*background-color: rgba(49, 189, 240, 0.5);*/
+	background-image: url("https://imgur.com/ZL0ZO2c.jpg");
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	
+	
     display: flex;
     flex-direction: column; 
     justify-content: center;
     align-items: center;
 	height: 100vh;
+	width: 100vw;
     /*height: calc(100vh - 10vh);*/
     /*margin-top: 10vh;*/
     text-align: center;
+}
+
+#welcome-section::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://imgur.com/ZL0ZO2c.jpg");
+    background-size: cover;
+	filter: invert(100%);
+    z-index: -1; 
 }
 
 #welcome-section h1 {
@@ -147,9 +165,7 @@
     text-shadow: 2px 2px 1px rgba(55, 100, 55, 0.5);
 }
 
-#welcome-section:hover {
-    background-color: bisque;
-}
+#welcome-section:hover {}
 
 #welcome-section h1:hover {
     animation: bounce 3s;
