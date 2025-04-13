@@ -146,15 +146,18 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	
     display: flex;
     flex-direction: column; 
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+	position: relative;
+	
 	height: 100vh;
 	width: 100vw;
     /*height: calc(100vh - 10vh);*/
     /*margin-top: 10vh;*/
-    text-align: center;
+
 }
 
 /*#welcome-section::after {
@@ -167,12 +170,35 @@
 	filter: invert(100%);
     z-index: -1; 
 } */
+
 #welcome-section h1 {
     margin-top: 10vh;
 	margin-bottom: 4vh;
     position: relative;
     font-family: 'Courier New', Courier, monospace;
     font-size: 50px;
+    text-shadow: 2px 2px 1px rgba(55, 100, 55, 0.5);
+	color: white;
+}
+
+#welcome-section h2 {
+
+	margin-bottom:;
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    text-shadow: 2px 2px 1px rgba(55, 100, 55, 0.5);
+	color: rgba(55, 100, 55, 0.9);
+}
+
+#welcome-section p {
+	margin-bottom:;
+    position: absolute;
+	justify-content: left-side;
+	align-items: left-side;
+	
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
     text-shadow: 2px 2px 1px rgba(55, 100, 55, 0.5);
 	color: white;
 }
@@ -184,9 +210,11 @@
 }
 
 #sullys-welcome-pic-container {
-	height: 60%;
+	height: 60vh;
 	width: auto;
 	max-width: 30vw;
+	margin-left: 60vw;
+	position: relative;
 }
 
 #sullys-welcome-pic-container:hover {
@@ -207,14 +235,16 @@
 #Contact-Icons-container {
     display: flex;
     flex-direction: row;
-	position: relative;
+	position: absolute;
     height: auto;
     width: 100%;
-	align-items: center;
+	
     justify-content: center;
     align-items: center;
     gap: 5vw;
-	padding: 5vw;
+	padding: 5vh;
+	background-color: rgba(55, 100, 55, 0.5);
+	bottom: 0;
 }
 
 
