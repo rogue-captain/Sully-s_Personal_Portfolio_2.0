@@ -1,8 +1,11 @@
-/* CSS Reset */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap');
+
+/* CSS Defaults */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+	font-family: 'Abril Fatface', serif;
+	font-weight: bold;
   }
   
   
@@ -38,10 +41,10 @@
 @keyframes expandGridItem {
 	from {
 		height: 30vh;
-		width: 20vh;
+		width: 20vw;
 	} to {
-		height: 32vw;
-		width: 30vw;
+		height: 40vh;
+		width: 25vw;
 	}
 }
 
@@ -62,22 +65,8 @@
 
 
 
-@media (max-width: 600px) {
-  #navbar {
-    flex-direction: column;
-    height: auto;
-  } 
-}
 
-@media (max-width: 600px) {
-    #project-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-    .project-grid-item {
-        width: 90%;
-    }
-}
+
 
 
 
@@ -98,15 +87,17 @@
 
 /*-------------------------------------- NAV -------------------------------------*/
 #navbar {
-  position: fixed;
-  display: flex;
-  top: 0;
   height: 6vh;
-  width: 100%;
-  /*border-radius: 8px;*/
+  width: 100vw;
+  flex-shrink: 0;
+  top: 0;  
+  
   padding: 5px;
   justify-content: space-around;
-  align-items: center;
+  align-items: center;	
+  position: fixed;
+  display: flex;
+
   gap: 15px;
   background-color: rgba(55, 100, 55, 0.5);
   z-index: 1;
@@ -117,7 +108,7 @@
 }
 
 .nav-link {
-    font-family: Verdana, sans-serif;
+	text-decoration: none;
     font-size: 20px;
     color: white;
     transition: transform 0.3s ease, color 0.3s ease;
@@ -125,7 +116,7 @@
 
 .nav-link:hover {
   color: black;
-  background-color:aqua;
+  background-color: aqua;
   text-decoration:solid;  
   /*transform: translate3d(10px, 0, 0);*/
   animation: bounce 1s;
@@ -149,8 +140,8 @@
 	
     display: flex;
     flex-direction: column; 
-    justify-content: space-around;
-    align-items: center;
+    justify-content: none;
+    align-items: ;
 	position: relative;
 	
 	height: 100vh;
@@ -171,87 +162,110 @@
     z-index: -1; 
 } */
 
-#welcome-section h1 {
-    margin-top: 10vh;
+#welcome-section-content {
+	height: 100%;
+	max-height: 86vh;
+	width: 100vw;
+	
+	display: flex;
+	flex-direction: column;
+	flex-grow: 0;
+	box-sizing: border-box;
+	
+	margin-top: 6vh;
+	margin-bottom: 8vh;
+	padding: 2vh;
+}
+
+#welcome-section-content h1 {
+    margin-top: 2vh;
 	margin-bottom: 4vh;
     position: relative;
-    font-family: 'Courier New', Courier, monospace;
+	
+
     font-size: 50px;
     text-shadow: 2px 2px 1px rgba(55, 100, 55, 0.5);
+	text-align: left;
+	margin-left: 5vw;
 	color: white;
 }
 
-#welcome-section h2 {
-
-	margin-bottom:;
+#welcome-section-content h2 {
+	margin-bottom:2vh;
     position: relative;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 24px;
+	
+    font-size: 30px;
     text-shadow: 2px 2px 1px rgba(55, 100, 55, 0.5);
+	text-align: left;
+	margin-left: 5vw;
 	color: rgba(55, 100, 55, 0.9);
 }
 
-#welcome-section p {
+#welcome-section-content p {
 	margin-bottom:;
-    position: absolute;
-	justify-content: left-side;
-	align-items: left-side;
+    position: relative;
 	
-    font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     text-shadow: 2px 2px 1px rgba(55, 100, 55, 0.5);
+	text-align: left;
+	margin-left: 5vw;	
 	color: white;
 }
 
 #welcome-section:hover {}
 
-#welcome-section h1:hover {
+#welcome-section-content h1:hover {
     animation: bounce 3s;
 }
 
-#sullys-welcome-pic-container {
-	height: 60vh;
+
+#sullys-welcome-pic {
+	height: auto;
+	max-height: 50vh;
 	width: auto;
-	max-width: 30vw;
-	margin-left: 60vw;
+	max-width: 50vw;
+	
 	position: relative;
+	align-self: flex-end;
+	margin-top: auto;
+	margin-right: 15vw;
+	
+	object-fit: contain;
+	
+	border-radius: 0;
+	/*box-shadow: 0 4px 10px rgb(0, 0, 0, 0.9);*/
 }
 
-#sullys-welcome-pic-container:hover {
+#sullys-welcome-pic:hover {
 	animation: wiggle 1s ease-in-out;
 } 
 
-#sullys-welcome-pic {
-	height: 100%;
-	width: 100%;
-	border-radius: 8px;
-	/*box-shadow: 0 4px 10px rgb(0, 0, 0, 0.9);*/
-	display: inline-block;
-	animation: wiggle 1s ease-in-out;
-	margin-bottom: 5%;
-}
-
 
 #Contact-Icons-container {
+    height: 8vh;
+    width: 100vw;
+	bottom: 0;
+	box-sizing: border-box;
+	
     display: flex;
     flex-direction: row;
-	position: absolute;
-    height: auto;
-    width: 100%;
+
+	position: fixed;
 	
     justify-content: center;
     align-items: center;
     gap: 5vw;
 	padding: 5vh;
+	
 	background-color: rgba(55, 100, 55, 0.5);
-	bottom: 0;
 }
 
 
 .profile-link {
-    font-family: 'Courier New', Courier, monospace;
+
     font-size: 25px;
     font-weight: bold;
+	text-decoration: none;
     color: white;
 }
 
@@ -274,13 +288,21 @@
 /*-------------------------------------- ABOUT ME SECTION -------------------------------------*/
 
 #aboutMe1 {
+	height: auto;
+	min-height: 100vh;
+	width: 100vw;
+	
     background-image: url("https://imgur.com/VuSSZAO.jpg");
+	background-size: cover;
+	background-position:center;
+	background-repeat: no-repeat;
+	
     display: flex;
     flex-direction: column; 
+	flex-grow: 1;
     justify-content: center;
     align-items: center;
-	height: 100vh;
-	width: 100vw;
+
     /*height: calc(100vh - 10vh);*/
     /*margin-top: 10vh;*/
     text-align: center;
@@ -292,50 +314,56 @@
 	margin-top: 8vh;
 	margin-bottom: 5vh;
     position: relative;
-    font-family: 'Courier New', Courier, monospace;
     font-size: 50px;
     text-shadow: 2px 2px 1px rgba(55, 100, 55, 0.5);
 	color: white;
 }
 
 #aboutMe2 {
+	height: auto;
+	width: auto;
+	
     display: flex;
     flex-direction: row; 
+	flex-grow: 1;
+	box-sizing: border-box;
+	
     justify-content: center;
     align-items: center;
-	max-height: 80vh;
-	width: auto;
+
     /*height: calc(100vh - 10vh);*/
     /*margin-top: 10vh;*/
     text-align: center;	
 }
 
-#aboutMePicContainer {
-	position: relative;
-	margin-bottom: 5vh;
-}
-
-#aboutMePicContainer:hover {
-	animation: wiggle 1s ease-in-out;
-}
+#aboutMePicContainer:hover {}
 
 #aboutMePic {
 	height: 100%;
 	width: 100%;
+	max-width: 25vw;
+	
 	border-radius: 8px;
 	box-shadow: 0 4px 10px rgb(0, 0, 0, 0.9);
 }
 
+#aboutMePic:hover {
+	animation: wiggle 1s ease-in-out;	
+}
+
 #aboutMeTextContainer {
 	height: auto;
-	max-width: 60vw;
-	margin-bottom: 5vh;
+
+	max-width: 70vw;
+	
 	padding: 5vw;
+	position: relative;
+	overflow: contain;
+	box-sizing: border-box;
 }
 
 #aboutMe2 p {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 25px;
+    font-size: 1.5vw;
     color: white;
 	position: relative;
 }
@@ -362,29 +390,36 @@
 
 /*-------------------------------------- projects -------------------------------------*/
 #projects {
-    background-color: rgba(55, 100, 55, 0.5);
+    background-image: url("https://i.imgur.com/ZXr3C0e.gif");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	
     height: auto;
     width: 100vw;
+	
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    font-family: 'Courier New', Courier, monospace;
+	
     font-size: large;
     font-weight: 200;
 }
 
-#projects:hover {
-    background-color: rgba(0, 128, 128, 1);
-}
+#projects:hover {}
 
 
 
 #projects h1 {
-    font-size: 50px;
-    text-shadow: 2px 2px 1px rgba(55, 100, 55, 0.6);
-    text-decoration: underline;
 	margin-top: 10vh;
+	
+    font-size: 50px;
+	color: white;
+	font-size-adjust: relative;
+    text-shadow: 2px 2px 1px rgba(55, 100, 55, 0.6);
+    text-decoration: none;
+	
 }
 
 
@@ -451,7 +486,6 @@
 .project-item-title {
 	border-radius: 8px;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
     font-size: medium;
     color: white;
     background-color: black;
@@ -481,33 +515,43 @@
 
 
 #skillsSection {
-    background-color: rgba(49, 189, 240, 0.5);
-    /*height: calc(100vh - 30vh);*/
 	height: 100vh;
     width: 100vw;
+	
+    background-image: url("https://i.imgur.com/EkLql95.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
     display: flex;
-    flex-direction: grid;
-    font-family: 'Courier New', Courier, monospace;
-    margin: auto;
+    flex-direction: column;
+	position: relative;
+	box-sizing: border-box;
+	
     align-items: center;
-	gap: 7vh;
+	gap: 3vw;
+	padding: 2vw;
 }
 
-#skillsSection h1,
-#skillsSection h3 {
-    margin-top: 5vh;
-	padding: 5vh;
+#skillsHeader {
+	height: auto;
+	width: 100vw;
+	
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin-top: 6vh;
+	box-sizing: border-box;
+	padding: 2vw;
+	
+	text-align: center;
+	font-size: 50px;
 }
 
-#skillsSection:hover {
-    background-color: bisque;
+#skillsHeader h1 {
+	color: white;
 }
 
-#skillsSection h1 {
-	top: 10;
-    font-size: 40px;
-    text-decoration: underline;
-}
 
 /* #skillsSection-icons-container {
     display: flex;
@@ -521,25 +565,52 @@
     margin-bottom: 10px; 
 }*/
 
-#skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
+#skillsContainerBox {
+	height: auto;
+	width: 100vw;
+	
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	box-sizing: border-box;
+	
+	align-items: center;
+	justify-content: center;
+	padding: 2vw;
+	gap: 3vw;
 }
 
+
 .skills-category {
-  background-color: #fff;
+  background-color: teal;
+  
+  height: auto;
+  min-height: 20vh;
+  width: 15vw;
+  
   border-radius: 16px;
-  padding: 20px;
+  padding: 2vw;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  
+  text-align: center;
+  
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skills-category:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+  background-color: purple;
+}
+
+.skills-category h3 {
+	color: white;
+	margin-bottom: 2vh;
+	text-align: center;
+}
+
+.skills-category li {
+	margin-bottom: 1vh;
 }
 
 .category-title {
@@ -589,4 +660,179 @@ footer p {
 
 footer p:hover {
     animation: slideIn 2s ease-in-out 1s; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEdia Query Parameters */
+
+@media (max-width: 600px) {
+  #navbar {
+	display: flex;
+    flex-direction: row;
+    height: auto;
+	margin-bottom: 20px;
+	gap: 4vw;
+  } 
+  
+ .nav-link {
+    
+  }  
+}
+
+
+@media (max-width: 600px) {
+  #welcome-section-content h1 {
+    font-size: 8vw;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  #welcome-section-content h2,
+  #welcome-section-content p {
+    font-size: 4vw;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  #sullys-welcome-pic {
+    max-width: 80vw;
+    margin-right: 0;
+  }	
+  
+  #Contact-Icons-container {
+	  display: flex;
+	  flex-direction: row;
+ 
+	  gap: 6vw;
+	  justify-content: center;
+	  
+  }
+  
+  .icon-label {
+	  display: none;
+  }
+}
+
+
+@media (max-width: 600px) {
+	
+	#projects {
+		display: flex;
+        flex-direction: column;
+        align-items: center;		
+	}
+    #project-grid {
+		display: flex;
+        flex-direction: column;
+        align-items: center;
+		position: relative;
+    }
+	
+    .project-grid-item {
+		position: relative;
+		
+		height: 30vh;
+        width: 90vw;
+    }
+	
+	.project-grid-item:hover {
+		animation: none;
+	}
+	
+	#projects h1 {
+		padding: 6vw;
+	}
+}
+
+
+@media (max-width: 600px) {
+	
+	#aboutMe1 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	
+#aboutMe2 {
+	display: flex;
+    flex-direction: column;
+	
+	align-items: center;
+	text-align: center;
+  }
+
+  #aboutMePic {
+    max-width: 80vw;
+	margin-bottom: 20px;
+  }
+
+  #aboutMeTextContainer {
+    padding: 3vw;
+    max-width: 90vw;
+  }
+
+  #aboutMe2 p {
+    font-size: 4vw;
+  }	
+}
+
+
+@media (max-width: 600px) {
+  #skillsSection {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	height: auto;
+	width: 100vw;	
+  }	
+  
+  #skillsHeader h1 {
+	  font-size: 10vw;
+  }
+  
+  #skillsContainerBox {
+	display: flex;
+	flex-direction: column;
+	
+	position: relative;
+	
+	height: auto;
+	width: 100vw;
+  }
+  
+  .skills-category {
+	display: flex;
+	flex-direction: column;
+	
+	position: relative;
+	box-sizing: border-box;
+	padding: 1vw;
+	
+	height: auto;
+	width: 80vw;
+  }
+  
+  .skills-category ul {
+	padding: 4vw;
+ 	  
+	list-style-type: square;
+	list-style-postion: inside;	
+  }
 }
