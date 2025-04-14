@@ -98,7 +98,7 @@ header {
 	left: 0;
 	width: 100vw;
 	padding: 2vw;
-	background: yellowgreen;
+	background: transaprent;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -121,7 +121,7 @@ header {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/*
+
 .nav-link:hover {
   color: black;
   background-color: aqua;
@@ -129,7 +129,15 @@ header {
   animation: bounce 1s;
   border-radius: 8px;
   padding: 10px;
-} */
+  transition: .3s ease-in-out;
+} 
+
+#boxMenuIcon {
+	font-size: 2.5vw;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
 
 /*-------------------------------------- NAV -------------------------------------*/
 
