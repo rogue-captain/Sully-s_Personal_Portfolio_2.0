@@ -77,13 +77,20 @@
 	box-sizing: border-box;
   }
   
-  :root {}
+  :root {
+	  --mainBackgroundColor: rgba(50, 0, 150, 0.9);
+	  --txtClr: white;
+  }
   
   html {
+	  font-size: 62%;
 	  overflow-x: hidden;
   }
   
-  body {}
+  body {
+	  background: var(--mainBackgroundColor);
+	  color:var(txtClr);
+  }
 
 
 
@@ -147,91 +154,20 @@ header {
 
 /*-------------------------------------- WELCOME SECTION -------------------------------------*/
 #welcome-section {
-    /*background-color: rgba(49, 189, 240, 0.5);*/
-	background-image: url("https://imgur.com/ZL0ZO2c.jpg");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	
-    display: flex;
-    flex-direction: column; 
-    justify-content: none;
-    align-items: ;
-	position: relative;
-	
-	height: 100vh;
-	width: 100vw;
-    /*height: calc(100vh - 10vh);*/
-    /*margin-top: 10vh;*/
-
+	min-height: 100vh;
+	padding: 5vw 9% 1vw;
 }
 
-/*#welcome-section::after {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("https://imgur.com/ZL0ZO2c.jpg");
-    background-size: cover;
-	filter: invert(100%);
-    z-index: -1; 
-} */
-
-#welcome-section-content {
-	height: 100%;
-	max-height: 86vh;
-	width: 100vw;
-	
+.home {
 	display: flex;
-	flex-direction: column;
-	flex-grow: 0;
-	box-sizing: border-box;
-	
-	margin-top: 6vh;
-	margin-bottom: 8vh;
-	padding: 2vh;
+	align-items: center;
+	padding: 0 9%;
 }
 
-#welcome-section-content h1 {
-    margin-top: 2vh;
-	margin-bottom: 4vh;
-    position: relative;
-	
-
-    font-size: 50px;
-    text-shadow: 2px 2px 1px rgba(55, 100, 55, 0.5);
-	text-align: left;
-	margin-left: 5vw;
-	color: white;
+.home-Welcome-section-content {
+	max-width: 60vw;
 }
 
-#welcome-section-content h2 {
-	margin-bottom:2vh;
-    position: relative;
-	
-    font-size: 30px;
-    text-shadow: 2px 2px 1px rgba(55, 100, 55, 0.5);
-	text-align: left;
-	margin-left: 5vw;
-	color: rgba(55, 100, 55, 0.9);
-}
-
-#welcome-section-content p {
-	margin-bottom:;
-    position: relative;
-	
-    font-size: 20px;
-    text-shadow: 2px 2px 1px rgba(55, 100, 55, 0.5);
-	text-align: left;
-	margin-left: 5vw;	
-	color: white;
-}
-
-#welcome-section:hover {}
-
-#welcome-section-content h1:hover {
-    animation: bounce 3s;
-}
 
 
 #sullys-welcome-pic {
