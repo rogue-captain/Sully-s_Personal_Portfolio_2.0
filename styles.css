@@ -65,7 +65,13 @@
 
 
 
-/* CSS Defaults */
+/* CSS Basics / Variables */
+
+  :root {
+	  --mainBackgroundColor: rgba(50, 0, 150, 0.9);
+	  --txtClr: white;
+	  --hoverTxtClr: rgba();
+  }
 
 * {
     margin: 0;
@@ -75,11 +81,6 @@
 	text-decoration: none;
 	scroll-behavior: smooth;
 	box-sizing: border-box;
-  }
-  
-  :root {
-	  --mainBackgroundColor: rgba(50, 0, 150, 0.9);
-	  --txtClr: white;
   }
   
   html {
