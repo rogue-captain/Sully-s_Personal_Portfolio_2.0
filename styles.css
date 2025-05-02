@@ -163,17 +163,17 @@ header {
 	min-height: 90vh;
 	
 	padding: 5vh 9% 1vw;
-		
-	background: url('https://i.imgur.com/5XkctKH.png');
-	background-size: 50%;
-	background-repeat: no-repeat;
-	background-position: right;
 }
 
 .home {
 	display: flex;
 	align-items: center;
 	padding: 0 9%;
+	
+	background: url('https://i.imgur.com/5XkctKH.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
 }
 
 .home-Welcome-section-content {
@@ -279,7 +279,23 @@ header {
 .btn-box .btn:nth-child(2):hover {
 	color: var(--mainBackgroundColor);
 }
+
+
+.home-imgHover {
+	height: 90vh;
+	width: 30vw;
 	
+	position: absolute;
+	top: 0;	
+	right: 0;
+	background: transparent;
+	transition: 3s;
+}
+
+.home-imgHover:hover {
+	background: var(--mainBackgroundColor);
+	opacity: 0.6;
+}
 	
 
 #sullys-welcome-pic {
