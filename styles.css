@@ -516,7 +516,6 @@ header {
 	margin-bottom: 5vh;
 	box-shadow: 0 4px 10px rgb(0, 0, 0, 0.9);
 	border-radius: 8px;
-	/*transition: transform width 1.0s ease-in-out, height 1.0s ease-in-out;*/
 }
 
 .project-grid-item:hover {
@@ -659,17 +658,17 @@ header {
   
   text-align: center;
   
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 1s ease, box-shadow 0.3s ease;
 }
 
 .skills-category:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6vh);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
-  background-color: purple;
+  background-color: var(--mainBackgroundColor);
 }
 
 .skills-category h3 {
-	color: white;
+	color: var(--2ndtxtClr);
 	margin-bottom: 2vh;
 	text-align: center;
 }
