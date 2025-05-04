@@ -162,7 +162,8 @@ header {
 	
 	z-index: -1;
 	
-	animation: homeCursorFollow 6s linear infinite;
+	animation: homeCursorFollow 6s linear infinite , blinkCursor 1s step-end infinite; /**/
+	
 	animation-delay: 2s;
 }	
 
@@ -776,6 +777,7 @@ footer p:hover {
 
 
 @keyframes revealText {
+	
   0%, 10%, 100% {
     background-position: -22vw 0;
   }
@@ -786,57 +788,35 @@ footer p:hover {
 }
 
 @keyframes homeCursorFollow {
-  0%, 10%, 100% {
+	
+  0%, 
+  10%, 
+  100% {
     width: 0;
   }
 
-  65%, 78%, 85% {
+  65%, 
+  78%, 
+  85% {
     width: 100%;
     opacity: 1;
   }
 
-  75%, 81% {
+  75%, 
+  81% {
     opacity: 0;
   }
 }
 
-/*
-@keyframes revealText {
-  0%, 10%, 100% {
-    background-position: -40vw 0;
-  }
-
-  65%, 85% {
-    background-position: 0 0;
-  }
-}
-
-
-@keyframes homeCursorFollow {
-	
-  0%, 10%, 100% {
-    width: 0;
-  }
-
-  65%, 78%, 85% {
-    width: 100%;
-	opacity: 1;
-  }
-  
-  75%, 81% {
-	  opacity: 0;
-  }
-}
-*/
-
-/*@keyframes blinkCursor {
+/**/
+@keyframes blinkCursor {
   0%, 50% {
     opacity: 1;
   }
   51%, 100% {
     opacity: 0;
   }
-}*/
+}
 
 /* --------------------------- KEYFRAMES */
 
@@ -903,11 +883,10 @@ footer p:hover {
   #logo {
 	  font-size: 4vw;
   }
-}
-
-
-@media (max-width: 600px) {
-	
+  
+  
+  
+  	
    #welcome-section {
 		min-height: 80vh;
 	}
@@ -952,11 +931,7 @@ footer p:hover {
   .icon-label {
 	  display: none;
   }
-}
-
-
-@media (max-width: 600px) {
-	
+  
 	#projects {
 		display: flex;
         flex-direction: column;
@@ -983,44 +958,10 @@ footer p:hover {
 	#projects h1 {
 		padding: 6vw;
 	}
-}
-
-
-@media (max-width: 600px) {
 	
-	#aboutMe1 {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-	}
 	
-#aboutMe2 {
-	display: flex;
-    flex-direction: column;
 	
-	align-items: center;
-	text-align: center;
-  }
-
-  #aboutMePic {
-    max-width: 80vw;
-	margin-bottom: 20px;
-  }
-
-  #aboutMeTextContainer {
-    padding: 3vw;
-    max-width: 90vw;
-  }
-
-  #aboutMe2 p {
-    font-size: 4vw;
-  }	
-}
-
-
-@media (max-width: 600px) {
-  #skillsSection {
+	  #skillsSection {
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -1061,4 +1002,51 @@ footer p:hover {
 	list-style-type: square;
 	list-style-postion: inside;	
   }
+  
+	#aboutMe1 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	
+	#aboutMe2 {
+	display: flex;
+    flex-direction: column;
+	
+	align-items: center;
+	text-align: center;
+	}
+
+	#aboutMePic {
+    max-width: 80vw;
+	margin-bottom: 20px;
+	}
+
+	#aboutMeTextContainer {
+    padding: 3vw;
+    max-width: 90vw;
+	}
+
+	#aboutMe2 p {
+    font-size: 4vw;
+	}	
+}
+
+
+
+
+@media (max-width: 600px) {
+
+
+
+@media (max-width: 600px) {
+	
+
+
+@media (max-width: 600px) {
+
+
+@media (max-width: 600px) {
+
 }
