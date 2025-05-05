@@ -530,17 +530,25 @@ header {
 	margin-bottom: 5vh;
 	box-shadow: 0 4px 10px rgb(0, 0, 0, 0.9);
 	border-radius: 8px;
-	
+	transition:     
+	width 1s ease-in-out,
+    height 1s ease-in-out,
+    box-shadow 1s ease-in-out,
+	filter 0.5s ease-in-out;
 }
 
 .project-grid-item:hover {
 	/*transform: translateY(210%); /* Moves the title down when image is hovered */
-   /* opacity: 0;  Hides the title */
+   /* opacity: 0;  Hides the title 
    animation: expandGridItem 1.0s ease-in-out forwards;
+   transform: scale(1.1);*/
+   height: 36vh;
+   width: 24vw;
    box-shadow: 5px 5px 10px black;
    z-index: 5;
    margin-bottom: 5vh;
    border-radius: 8px;
+   filter: invert(100%);
 }
 
 
@@ -791,6 +799,7 @@ footer p:hover {
 		width: 25vw;
 	}
 }
+
 
 @keyframes wiggle {
 	0%, 100% { transform: rotate(0deg); }
