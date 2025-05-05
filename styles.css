@@ -306,7 +306,7 @@ header {
 	
     justify-content: center;
     align-items: center;
-    gap: 5vw;
+    gap: 7vw;
 	padding: 5vh;
 	
 	background-color: rgba(55, 100, 55, 0.5);
@@ -319,13 +319,15 @@ header {
     font-weight: bold;
 	text-decoration: none;
     color: var(--2ndtxtClr);
+	padding: 1vh 1vw;
+	transition: 0.6s ease;
 }
 
 /* idea: make the link "run" from cursor */
 .profile-link:hover {
-    font-size: 2vw;
+	font-size: 2vw;
     color: var(--2ndColor);
-    animation: bounce 1s;
+    animation: bounce 1s linear infinite;
 }
 
 /*-------------------------------------- WELCOME SECTION -------------------------------------*/
@@ -353,48 +355,52 @@ header {
 	flex-grow: 1;
     justify-content: center;
     align-items: center;
+	gap: 2vw;
 
     /*height: calc(100vh - 10vh);*/
     /*margin-top: 10vh;*/
     text-align: center;
+	padding-bottom: 4vh;
+}
+
+#aboutMe1 span {
+	color: var(--2ndColor);
 }
 
 
 #aboutMe1 h1 {
-
+	font-size: 5vw;
 	margin-top: 8vh;
 	margin-bottom: 5vh;
     position: relative;
-    font-size: 50px;
     text-shadow: 2px 2px 1px rgba(55, 100, 55, 0.5);
-	color: white;
+	color: var(--txtClr);
 }
 
-#aboutMe2 {
+.heading {} /* same as .aboutMeImg */
+
+.aboutMeImg {
 	height: auto;
 	width: auto;
-	
+	position: relative;
     display: flex;
-    flex-direction: row; 
-	flex-grow: 1;
-	box-sizing: border-box;
-	
     justify-content: center;
     align-items: center;
+	border-radius: 50%;
 
     /*height: calc(100vh - 10vh);*/
     /*margin-top: 10vh;*/
-    text-align: center;	
 }
 
-#aboutMePicContainer:hover {}
 
 #aboutMePic {
-	height: 100%;
-	width: 100%;
+	height: 90%;
+	width: 90%;
 	max-width: 25vw;
+	border-radius: 50%;
+	border: 0.2vw solid var(--2ndColor);
 	
-	border-radius: 8px;
+
 	box-shadow: 0 4px 10px rgb(0, 0, 0, 0.9);
 }
 
@@ -402,7 +408,22 @@ header {
 	animation: wiggle 1s ease-in-out;	
 }
 
+.aboutMeImg .circle-spin {
+	position: absolute;
+	/*top: 50%;
+	left: 50%;*/
+	transform: translate(-50%, -50%) rotate 0;
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border-top: 0.2vw solid var(--2ndColor);
+	border-bottom: 0.2vw solid var(--2ndColor);
+	border-left: 0.2vw solid var(--txtClr);
+	border-right: 0.2vw solid var(--txtClr);
+}
+
 #aboutMeTextContainer {
+	text-align: center;
 	height: auto;
 
 	max-width: 70vw;
@@ -413,9 +434,15 @@ header {
 	box-sizing: border-box;
 }
 
-#aboutMe2 p {
+#aboutMeTextContainer h3 {
+	font-size: 2vw;
+	color: var(--2ndtxtClr);
+}
+
+#aboutMeTextContainer p {
     font-size: 1.5vw;
-    color: white;
+    color: var(--txtClr);
+	margin: 2vw 0 2vw;
 	position: relative;
 }
 
@@ -453,6 +480,7 @@ header {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+	padding: 2vw;
 	
     font-size: large;
     font-weight: 200;
@@ -502,6 +530,7 @@ header {
 	margin-bottom: 5vh;
 	box-shadow: 0 4px 10px rgb(0, 0, 0, 0.9);
 	border-radius: 8px;
+	
 }
 
 .project-grid-item:hover {
@@ -509,7 +538,7 @@ header {
    /* opacity: 0;  Hides the title */
    animation: expandGridItem 1.0s ease-in-out forwards;
    box-shadow: 5px 5px 10px black;
-   z-index: 10;
+   z-index: 5;
    margin-bottom: 5vh;
    border-radius: 8px;
 }
