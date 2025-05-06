@@ -380,14 +380,15 @@ header {
 .heading {} /* same as .aboutMeImg */
 
 .aboutMeImg {
-	height: auto;
-	width: auto;
+	height: 36vh;
+	width: 36vh;
 	position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 	border-radius: 50%;
-
+	overflow: hidden;
+	
     /*height: calc(100vh - 10vh);*/
     /*margin-top: 10vh;*/
 }
@@ -399,9 +400,8 @@ header {
 	max-width: 25vw;
 	border-radius: 50%;
 	border: 0.2vw solid var(--2ndColor);
-	
-
 	box-shadow: 0 4px 10px rgb(0, 0, 0, 0.9);
+	object-fit: cover;
 }
 
 #aboutMePic:hover {
@@ -438,13 +438,13 @@ header {
 }
 
 #aboutMeTextContainer h3 {
-	font-size: 2vw;
-	color: var(--2ndtxtClr);
+	font-size: 2.5vw;
+	color: var(--2ndColor);
 }
 
 #aboutMeTextContainer p {
-    font-size: 1.5vw;
-    color: var(--txtClr);
+    font-size: 1.8vw;
+    color: var(--2ndtxtClr);
 	margin: 2vw 0 2vw;
 	position: relative;
 }
